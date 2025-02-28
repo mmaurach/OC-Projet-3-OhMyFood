@@ -1,0 +1,14 @@
+{
+  "name": "projet-3---oh-my-food",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "author": "Maxime Mauracheea",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.85.1"
+  }
+}
