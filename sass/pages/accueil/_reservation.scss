@@ -1,0 +1,18 @@
+.reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 27px;
+  padding-bottom: 57px;
+  background-color: $background-main-color;
+  h1 {
+    @include title-fontstyle;
+    text-align: center;
+  }
+  p {
+    font-family: $text-font;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+  }
+}

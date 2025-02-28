@@ -3,6 +3,7 @@
   background-color: $grey2;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 10px;
   @include center-flex;
+  position: relative;
   input {
     border: none;
     background-color: $grey2;
