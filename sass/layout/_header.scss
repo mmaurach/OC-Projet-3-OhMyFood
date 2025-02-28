@@ -1,0 +1,13 @@
+.header-bar {
+  height: 65px;
+  @include center-flex;
+  img {
+    width: 10em;
+  }
+  .fa-arrow-left {
+    position: absolute;
+    left: 23px;
+    top: 24px;
+    color: $background-grey-color;
+  }
+}

@@ -1,0 +1,22 @@
+// Import des fichiers SASS
+
+// Base
+@import "./base/typography";
+@import "./base/reset";
+
+// Utils
+@import "./utils/variables";
+@import "./utils/mixins";
+
+// Components
+@import "./components/buttons";
+
+// Layout
+@import "./layout/header";
+@import "./layout/footer";
+
+// Pages
+@import "./pages/accueil/location-bar";
+@import "./pages/accueil/reservation";
+@import "./pages/accueil/fonctionnemnt";
+@import "./pages/accueil/restaurant";

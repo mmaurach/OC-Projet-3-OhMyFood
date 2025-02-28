@@ -1,0 +1,16 @@
+.location-bar {
+  height: 50px;
+  background-color: $grey2;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 10px;
+  @include center-flex;
+  input {
+    border: none;
+    background-color: $grey2;
+    font-size: 16px;
+    font-family: $text-font;
+    text-align: center;
+  }
+  .fa-location-dot {
+    color: $background-grey-color;
+  }
+}
