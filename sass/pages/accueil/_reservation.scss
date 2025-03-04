@@ -1,19 +1,15 @@
 .reservation {
-  display: flex;
-  flex-direction: column;
+  @include flex-column-gap(25px);
   align-items: center;
   padding-top: 27px;
   padding-bottom: 57px;
-  gap: 25px;
   background-color: $background-main-color;
   h1 {
     @include title-fontstyle;
     text-align: center;
   }
   p {
-    font-family: $text-font;
-    font-size: 18px;
-    font-weight: lighter;
+    @include text-fontstyle($size: 18px, $weight: lighter);
     text-align: center;
   }
 }
@@ -26,6 +22,5 @@
   border-radius: 25px;
   cursor: pointer;
   color: white;
-  font-family: $text-font;
-  font-size: 16px;
+  @include text-fontstyle($size: 16px, $weight: normal);
 }

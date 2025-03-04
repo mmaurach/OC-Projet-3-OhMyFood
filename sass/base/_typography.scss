@@ -5,3 +5,9 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+@mixin text-fontstyle($font: $text-font, $size: 16px, $weight: normal) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+}

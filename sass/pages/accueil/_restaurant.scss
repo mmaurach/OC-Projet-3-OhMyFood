@@ -1,16 +1,12 @@
 .restaurants {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  @include flex-column-gap(18px);
   padding: 54px 20px 66px 20px;
   background: $background-main-color;
   h1 {
     @include title-fontstyle;
   }
   .card-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    @include flex-column-gap(20px);
     > a {
       width: 100%;
     }
@@ -37,27 +33,21 @@
       background: $new-btn-background;
       color: $new-btn-txt-color;
       @include center-flex;
-      font-family: $text-font;
-      font-size: 14px;
+      @include text-fontstyle($size: 14px);
     }
     .card-content {
       height: 30%;
-      padding-left: 15px;
-      padding-right: 25px;
+      padding: 0 25px 0 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       .card-title {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+        @include flex-column-gap(5px);
         h3 {
-          font-family: $text-font;
+          @include text-fontstyle($size: 18px, $weight: bold);
         }
         p {
-          font-family: $text-font;
-          font-size: 17px;
-          font-weight: lighter;
+          @include text-fontstyle($size: 17px, $weight: lighter);
         }
       }
       .btn-like {

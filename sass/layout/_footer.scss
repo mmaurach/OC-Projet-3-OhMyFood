@@ -1,29 +1,20 @@
 .footer-bar {
   background-color: $background-grey-color;
   color: $white-text-color;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-left: 25px;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  @include flex-column-gap(16px);
+  padding: 22px 0 22px 25px;
   h2 {
     font-family: $title-font;
     font-size: 18px;
   }
   .footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+    @include flex-column-gap(7px);
     a {
       color: $white-text-color;
-      font-family: $text-font;
-      font-size: 16px;
+      @include text-fontstyle($size: 16px, $weight: normal);
     }
     .footer-content__icons {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
+      @include flex-column-gap(7px);
     }
     .fa-utensils {
       margin-right: 11px;

@@ -1,17 +1,11 @@
 .fonctionnement {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  padding-top: 48px;
-  padding-bottom: 68px;
-  gap: 26px;
+  @include flex-column-gap(26px);
+  padding: 48px 0 68px 20px;
   h1 {
     @include title-fontstyle;
   }
   .fonction-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+    @include flex-column-gap(35px);
     padding-left: 13px;
     .button-wrap {
       display: flex;
@@ -24,7 +18,7 @@
       position: relative;
       cursor: pointer;
       p {
-        font-family: $text-font;
+        @include text-fontstyle($size: 16px, $weight: normal);
       }
       .round-number {
         @include center-flex;
@@ -33,7 +27,7 @@
         background: $primary-color;
         color: white;
         border-radius: 15px;
-        font-size: 14px;
+        @include text-fontstyle($size: 14px, $weight: normal);
         position: absolute;
         left: -12px;
       }
