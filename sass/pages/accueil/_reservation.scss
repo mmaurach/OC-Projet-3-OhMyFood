@@ -13,14 +13,3 @@
     text-align: center;
   }
 }
-
-.btn-primary {
-  height: 50px;
-  width: 60%;
-  background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  color: white;
-  @include text-fontstyle($size: 16px, $weight: normal);
-}
