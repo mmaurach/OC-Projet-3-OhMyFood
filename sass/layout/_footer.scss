@@ -22,5 +22,31 @@
     .fa-handshake-angle {
       margin-right: 5px;
     }
+    .footer-content__text {
+      @include flex-column-gap(7px);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-bar {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 57px 25px 30px 0;
+    align-items: center;
+    gap: 50px;
+    h2 {
+      order: 2;
+    }
+    .footer-content {
+      flex-direction: row;
+      gap: 50px;
+      .footer-content__icons {
+        flex-direction: row;
+      }
+      .footer-content__text {
+        flex-direction: row;
+      }
+    }
   }
 }

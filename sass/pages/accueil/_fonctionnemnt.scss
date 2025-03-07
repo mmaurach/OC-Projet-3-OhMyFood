@@ -43,3 +43,13 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    padding: 50px 20px 50px 20px;
+    .fonction-wrap {
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+}
