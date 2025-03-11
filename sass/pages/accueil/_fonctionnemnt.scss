@@ -1,4 +1,6 @@
 .fonctionnement {
+  max-width: 1080px;
+  margin: 0 auto;
   @include flex-column-gap(26px);
   padding: 48px 0 68px 20px;
   h1 {
