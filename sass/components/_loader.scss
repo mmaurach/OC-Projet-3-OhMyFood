@@ -1,0 +1,50 @@
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  @include center-flex;
+  .fa-spinner {
+    font-size: 8em;
+    animation: loading 4s forwards;
+    &::before {
+      background-image: linear-gradient($primary-color, $secondary-color);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+.main-container {
+  opacity: 0;
+  visibility: hidden;
+  animation: showContent 0.5s 3s forwards;
+}
+
+@keyframes showContent {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

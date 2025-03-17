@@ -31,43 +31,46 @@ body {
   align-items: center;
 }
 .loader .fa-spinner {
-  font-size: 4em;
-  animation: loading 3s both;
+  font-size: 8em;
+  animation: loading 4s forwards;
+}
+.loader .fa-spinner::before {
+  background-image: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 @keyframes loading {
   0% {
     opacity: 0;
-  }
-  20% {
-    opacity: 0;
     transform: rotate(0deg);
   }
-  30% {
-    transform: rotate(90deg);
-    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  20% {
+    opacity: 1;
   }
   80% {
     transform: rotate(360deg);
-    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  }
-  99% {
-    opacity: 1;
   }
   100% {
     opacity: 0;
+    transform: rotate(360deg);
   }
 }
 .main-container {
-  animation: hidden 8s both;
+  opacity: 0;
+  visibility: hidden;
+  animation: showContent 0.5s 3s forwards;
 }
 
-@keyframes hidden {
+@keyframes showContent {
   0% {
     opacity: 0;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
+    visibility: visible;
   }
 }
 .btn-primary {
