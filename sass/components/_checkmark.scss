@@ -1,0 +1,22 @@
+.checkmark {
+  position: absolute;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background-color: $third-color;
+  color: white;
+  @include center-flex;
+  border-radius: 0 15px 15px 0;
+  transform: scaleX(0);
+  transition: transform 300ms;
+  transform-origin: right;
+}
+
+.food__wrapper:hover {
+  .checkmark {
+    transform: scaleX(1);
+  }
+  .food__wrapper--content > p {
+    transform: translateX(-60px);
+  }
+}

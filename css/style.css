@@ -73,6 +73,29 @@ body {
     visibility: visible;
   }
 }
+.checkmark {
+  position: absolute;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #99e2d0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  transform: scaleX(0);
+  transition: transform 300ms;
+  transform-origin: right;
+}
+
+.food__wrapper:hover .checkmark {
+  transform: scaleX(1);
+}
+.food__wrapper:hover .food__wrapper--content > p {
+  transform: translateX(-60px);
+}
+
 .btn-primary {
   height: 50px;
   width: 220px;
@@ -451,6 +474,8 @@ body {
 }
 
 .section__wrapper {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -477,6 +502,7 @@ body {
   background-color: #99e2d0;
 }
 .section__wrapper .food__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -496,16 +522,41 @@ body {
   justify-content: space-between;
 }
 .section__wrapper .food__wrapper .food__wrapper--content > h2 {
+  max-width: 230px;
   font-family: "Roboto";
   font-size: 15px;
   font-weight: lighter;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .section__wrapper .food__wrapper .food__wrapper--content > p {
   font-family: "Roboto";
   font-size: 15px;
   font-weight: normal;
+  transition: transform 300ms;
 }
 
+.entrees {
+  animation-delay: 0.5s;
+}
+
+.plats {
+  animation-delay: 1s;
+}
+
+.desserts {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 768px) {
   .restaurant-img {
     width: 100%;
@@ -517,6 +568,9 @@ body {
   }
   .section__wrapper {
     width: 60%;
+  }
+  .section__wrapper .food__wrapper .food__wrapper--content > h2 {
+    max-width: 1440px;
   }
 }
 

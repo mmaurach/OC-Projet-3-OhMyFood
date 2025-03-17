@@ -32,6 +32,8 @@
 }
 
 .section__wrapper {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
   @include flex-column-gap(12px);
   width: 100%;
   > h2 {
@@ -52,6 +54,7 @@
     }
   }
   .food__wrapper {
+    position: relative;
     @include flex-column-gap(0px);
     justify-content: space-evenly;
     height: 70px;
@@ -65,12 +68,38 @@
       display: flex;
       justify-content: space-between;
       > h2 {
+        max-width: 230px;
         @include text-fontstyle($size: 15px, $weight: lighter);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
       > p {
         @include text-fontstyle($size: 15px, $weight: normal);
+        transition: transform 300ms;
       }
     }
+  }
+}
+
+.entrees {
+  animation-delay: 0.5s;
+}
+
+.plats {
+  animation-delay: 1s;
+}
+
+.desserts {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -89,5 +118,10 @@
 
   .section__wrapper {
     width: 60%;
+    .food__wrapper {
+      .food__wrapper--content > h2 {
+        max-width: 1440px;
+      }
+    }
   }
 }
