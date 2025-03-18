@@ -5,7 +5,7 @@
   @include center-flex;
   .fa-spinner {
     font-size: 8em;
-    animation: loading 4s forwards;
+    animation: loading 3s forwards;
     &::before {
       background-image: linear-gradient($primary-color, $secondary-color);
       background-clip: text;
@@ -15,13 +15,25 @@
   }
 }
 
+.main-container {
+  opacity: 0;
+  animation: showContent 0.5s 2.5s forwards;
+}
+
 @keyframes loading {
   0% {
-    opacity: 0;
+    opacity: 0.1;
     transform: rotate(0deg);
   }
   20% {
+    transform: rotate(90deg);
+  }
+  40% {
+    transform: rotate(180deg);
     opacity: 1;
+  }
+  60% {
+    transform: rotate(270deg);
   }
   80% {
     transform: rotate(360deg);
@@ -32,19 +44,11 @@
   }
 }
 
-.main-container {
-  opacity: 0;
-  visibility: hidden;
-  animation: showContent 0.5s 3s forwards;
-}
-
 @keyframes showContent {
-  0% {
+  from {
     opacity: 0;
-    visibility: hidden;
   }
-  100% {
+  to {
     opacity: 1;
-    visibility: visible;
   }
 }

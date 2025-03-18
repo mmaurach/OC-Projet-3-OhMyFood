@@ -8,7 +8,7 @@
   color: white;
   @include text-fontstyle($size: 16px, $weight: normal);
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
-  transition: transform 400ms;
+  transition: transform 400ms ease;
   &:hover {
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.4));
     background: linear-gradient(
@@ -23,26 +23,25 @@
 
 .btn-like {
   cursor: pointer;
-  width: 22px;
-  height: 22px;
-  @include center-flex;
+  position: relative;
+  .empty-heart {
+    position: absolute;
+    transform: scale(1.1);
+  }
   .full-heart {
-    display: none;
+    position: absolute;
+    transform: scale(0);
+    transition: transform 500ms ease;
+    &::before {
+      background-image: linear-gradient($primary-color, $secondary-color);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
   }
   &:hover {
-    .empty-heart {
-      display: none;
-    }
     .full-heart {
-      display: block;
-      &::before {
-        background-image: linear-gradient($primary-color, $secondary-color);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-      --fa-beat-fade-scale: 1.25;
-      --fa-beat-fade-opacity: 0;
+      transform: scale(0.9);
     }
   }
 }
