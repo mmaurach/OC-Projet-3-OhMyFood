@@ -9,3 +9,10 @@
   flex-direction: column;
   gap: $gap;
 }
+
+@mixin before-gradient-color {
+  background-image: linear-gradient($primary-color, $secondary-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

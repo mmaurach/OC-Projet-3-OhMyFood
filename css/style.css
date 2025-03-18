@@ -22,30 +22,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.loader .fa-spinner {
-  font-size: 8em;
-  animation: loading 3s forwards;
-}
-.loader .fa-spinner::before {
-  background-image: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.main-container {
-  opacity: 0;
-  animation: showContent 0.5s 2.5s forwards;
-}
-
 @keyframes loading {
   0% {
     opacity: 0.1;
@@ -77,6 +53,30 @@ body {
     opacity: 1;
   }
 }
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader .fa-spinner {
+  font-size: 8em;
+  animation: loading 3s forwards;
+}
+.loader .fa-spinner::before {
+  background-image: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.main-container {
+  opacity: 0;
+  animation: showContent 0.5s 2.5s forwards;
+}
+
 .checkmark {
   position: absolute;
   right: 0;
@@ -112,12 +112,12 @@ body {
   font-size: 16px;
   font-weight: normal;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
-  transition: transform 400ms ease;
+  transition: transform 400ms;
 }
 .btn-primary:hover {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.4));
   background: linear-gradient(0deg, rgb(160.5, 107.125, 224.375) 0%, rgb(255, 146.5, 225.0410447761) 100%);
-  transition: background 0.3s ease;
+  transition: background 0.3s;
   transform: scale(1.1);
 }
 
@@ -132,7 +132,7 @@ body {
 .btn-like .full-heart {
   position: absolute;
   transform: scale(0);
-  transition: transform 500ms ease;
+  transition: transform 500ms;
 }
 .btn-like .full-heart::before {
   background-image: linear-gradient(#9356dc, #ff79da);
@@ -300,6 +300,7 @@ body {
   background: #f6f6f6;
   position: relative;
   cursor: pointer;
+  transition: transform 100ms;
 }
 .fonctionnement .fonction-wrap .button-wrap p {
   font-family: "Roboto";
@@ -325,6 +326,7 @@ body {
   color: #7e7e7e;
 }
 .fonctionnement .fonction-wrap .button-wrap:hover {
+  transform: scale(1.05);
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
 }
 .fonctionnement .fonction-wrap .button-wrap:hover .fa-solid {
@@ -476,7 +478,7 @@ body {
 
 .section__wrapper {
   opacity: 0;
-  animation: showContent 1s ease-out forwards;
+  animation: showContent 1s forwards;
   display: flex;
   flex-direction: column;
   gap: 12px;

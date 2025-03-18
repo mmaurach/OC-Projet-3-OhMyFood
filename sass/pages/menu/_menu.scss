@@ -33,7 +33,7 @@
 
 .section__wrapper {
   opacity: 0;
-  animation: showContent 1s ease-out forwards;
+  animation: showContent 1s forwards;
   @include flex-column-gap(12px);
   width: 100%;
   > h2 {
@@ -82,6 +82,8 @@
   }
 }
 
+// Animation des sections Entrees, Plats et Desserts
+
 .entrees {
   animation-delay: 0.5s;
 }
@@ -93,6 +95,8 @@
 .desserts {
   animation-delay: 1.5s;
 }
+
+// Partie Responsive
 
 @media screen and (min-width: 768px) {
   .restaurant-img {

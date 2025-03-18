@@ -19,6 +19,7 @@
       background: $background-main-color;
       position: relative;
       cursor: pointer;
+      transition: transform 100ms;
       p {
         @include text-fontstyle($size: 16px, $weight: normal);
       }
@@ -37,6 +38,7 @@
         color: $icon-color;
       }
       &:hover {
+        transform: scale(1.05);
         filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
         .fa-solid {
           color: $primary-color;
@@ -45,6 +47,8 @@
     }
   }
 }
+
+// Partie Responsive
 
 @media screen and (min-width: 768px) {
   .fonctionnement {
