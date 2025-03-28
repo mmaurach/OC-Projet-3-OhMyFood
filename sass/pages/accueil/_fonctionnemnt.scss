@@ -20,7 +20,7 @@
       position: relative;
       cursor: pointer;
       transition: transform 100ms;
-      p {
+      h2 {
         @include text-fontstyle($size: 16px, $weight: normal);
       }
       .round-number {

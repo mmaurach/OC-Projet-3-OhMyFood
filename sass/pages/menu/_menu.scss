@@ -63,12 +63,16 @@
     border-radius: 15px;
     > h3 {
       @include text-fontstyle($size: 18px, $weight: normal);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: padding-right 300ms;
     }
     .food__wrapper--content {
       display: flex;
       justify-content: space-between;
+
       > h2 {
-        max-width: 230px;
         @include text-fontstyle($size: 15px, $weight: lighter);
         text-overflow: ellipsis;
         overflow: hidden;
@@ -76,7 +80,7 @@
       }
       > p {
         @include text-fontstyle($size: 15px, $weight: normal);
-        transition: transform 300ms;
+        transition: margin-right 300ms;
       }
     }
   }

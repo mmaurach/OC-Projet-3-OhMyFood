@@ -24,6 +24,9 @@
     }
     .footer-content__text {
       @include flex-column-gap(7px);
+      a {
+        z-index: 1;
+      }
     }
   }
 }

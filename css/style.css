@@ -97,7 +97,10 @@ body {
   transform: scaleX(1);
 }
 .food__wrapper:hover .food__wrapper--content > p {
-  transform: translateX(-60px);
+  margin-right: 60px;
+}
+.food__wrapper:hover > h3 {
+  padding-right: 60px;
 }
 
 .btn-primary {
@@ -198,6 +201,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+.footer-bar .footer-content .footer-content__text a {
+  z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -302,7 +308,7 @@ body {
   cursor: pointer;
   transition: transform 100ms;
 }
-.fonctionnement .fonction-wrap .button-wrap p {
+.fonctionnement .fonction-wrap .button-wrap h2 {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: normal;
@@ -519,13 +525,16 @@ body {
   font-family: "Roboto";
   font-size: 18px;
   font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: padding-right 300ms;
 }
 .section__wrapper .food__wrapper .food__wrapper--content {
   display: flex;
   justify-content: space-between;
 }
 .section__wrapper .food__wrapper .food__wrapper--content > h2 {
-  max-width: 230px;
   font-family: "Roboto";
   font-size: 15px;
   font-weight: lighter;
@@ -537,7 +546,7 @@ body {
   font-family: "Roboto";
   font-size: 15px;
   font-weight: normal;
-  transition: transform 300ms;
+  transition: margin-right 300ms;
 }
 
 .entrees {

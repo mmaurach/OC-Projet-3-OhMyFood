@@ -17,6 +17,9 @@
     transform: scaleX(1);
   }
   .food__wrapper--content > p {
-    transform: translateX(-60px);
+    margin-right: 60px;
+  }
+  > h3 {
+    padding-right: 60px;
   }
 }
